@@ -9,8 +9,12 @@ from helper_functions.utility import check_password
 if not check_password():  
     st.stop()
 
-load_dotenv('.env')
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+if load_dotenv('.env'):
+    OPENAI_KEY = os.getenv('OPENAI_API_KEY')
+else:
+    OPENAI_KEY = st.secrets['OPENAI_API_KEY']
+
+client = OpenAI(api_key=OPENAI_KEY)
 
 ## Generate Embeddings
 def get_embedding(input, model='text-embedding-3-small'):
