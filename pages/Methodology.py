@@ -15,7 +15,7 @@ if not check_password():
     st.stop()
 
 
-st.image("data\Flowchart.png", caption="Methodology", use_column_width=True)
+st.image("data/Flowchart.png", caption="Methodology", use_column_width=True)
 
 with st.sidebar:
     st.page_link('main.py', label='About Us', icon='🏠')

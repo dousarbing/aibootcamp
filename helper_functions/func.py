@@ -30,7 +30,7 @@ def get_negotiation_advice(user_input):
 #### Resale Price Analyzer
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data\Resale Price (from Jan-2017 onwards).csv')
+    df = pd.read_csv('data/Resale Price (from Jan-2017 onwards).csv')
     return df
 
 # Price Range Prediction Function
